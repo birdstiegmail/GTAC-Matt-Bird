@@ -4,48 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGO Block Catalog</title>
+    <style>
+        body {
+            background-image: url('A_close-up_image_of_a_single_colorful_LEGO_brick,_.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .catalog {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>LEGO Block Catalog</h1>
+    <div class="catalog">
+        <h2>LEGO Block Catalog</h2>
+        <form>
+            <label for="blockName">Block Name:</label>
+            <input type="text" id="blockName" name="blockName"><br><br>
 
-    <h2>Categories</h2>
+            <label for="blockColor">Color:</label>
+            <select id="blockColor" name="blockColor">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select><br><br>
 
-    <label for="shape">Shape:</label>
-    <ul id="shape">
-        <li>Bricks
-            <ul>
-                <li>2x2 Brick</li>
-                <li>2x4 Brick</li>
-                <li>1x4 Brick</li>
-            </ul>
-        </li>
-        <li>Plates
-            <ul>
-                <li>2x2 Plate</li>
-                <li>2x4 Plate</li>
-                <li>1x6 Plate</li>
-            </ul>
-        </li>
-        <li>Slopes
-            <ul>
-                <li>2x2 Slope</li>
-                <li>2x3 Slope</li>
-                <li>1x2 Slope</li>
-            </ul>
-        </li>
-    </ul>
+            <label for="blockSize">Size:</label>
+            <select id="blockSize" name="blockSize">
+                <option value="1x1">1x1</option>
+                <option value="2x2">2x2</option>
+                <option value="2x4">2x4</option>
+                <option value="4x4">4x4</option>
+                <option value="6x2">6x2</option>
+            </select><br><br>
 
-    <label for="color">Color:</label>
-    <select id="color">
-        <option value="red">Red</option>
-        <option value="blue">Blue</option>
-        <option value="green">Green</option>
-        <option value="yellow">Yellow</option>
-        <option value="black">Black</option>
-    </select>
-
-    <label for="size">Size:</label>
-    <select id="size">
-        <option value="small">Small (1x1, 2x2)</option>
-        <option value="medium">Medium (2x4, 1x6)</option>
-        <option value="large">Large (4x4, 2x8)</option>
+            <input type="submit" value="Add to Catalog">
+        </form>
+    </div>
+</body>
+</html>
